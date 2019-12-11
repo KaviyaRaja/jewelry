@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UploadCollectionViewCell" customModule="Jewelry" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQe-QQ-ZCR">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7H-Ud-J8A">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3K-Vg-Dsl">
+                                <rect key="frame" x="55" y="3" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="TDg-a3-Vcr"/>
+                                    <constraint firstAttribute="height" constant="20" id="sb7-bM-qsE"/>
+                                </constraints>
+                                <state key="normal" image="Cance"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d7H-Ud-J8A" secondAttribute="trailing" id="4hF-wz-WGn"/>
+                            <constraint firstAttribute="bottom" secondItem="d7H-Ud-J8A" secondAttribute="bottom" id="7M1-dp-dje"/>
+                            <constraint firstItem="d7H-Ud-J8A" firstAttribute="top" secondItem="rQe-QQ-ZCR" secondAttribute="top" id="DgS-Nu-xa4"/>
+                            <constraint firstItem="P3K-Vg-Dsl" firstAttribute="top" secondItem="rQe-QQ-ZCR" secondAttribute="top" constant="3" id="FsQ-4m-4Gj"/>
+                            <constraint firstAttribute="trailing" secondItem="P3K-Vg-Dsl" secondAttribute="trailing" id="jIw-MP-vQb"/>
+                            <constraint firstItem="d7H-Ud-J8A" firstAttribute="leading" secondItem="rQe-QQ-ZCR" secondAttribute="leading" id="ylo-De-GmV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="rQe-QQ-ZCR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TId-mE-ao3"/>
+                <constraint firstAttribute="trailing" secondItem="rQe-QQ-ZCR" secondAttribute="trailing" id="WSp-U9-GSg"/>
+                <constraint firstItem="rQe-QQ-ZCR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vEJ-DF-GKn"/>
+                <constraint firstAttribute="bottom" secondItem="rQe-QQ-ZCR" secondAttribute="bottom" id="wTQ-jE-31T"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bgView" destination="rQe-QQ-ZCR" id="f31-Gr-ASd"/>
+                <outlet property="cancelButton" destination="P3K-Vg-Dsl" id="46g-ZM-xKb"/>
+                <outlet property="selectedImage" destination="d7H-Ud-J8A" id="De2-sj-wf4"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Cance" width="72" height="72"/>
+    </resources>
+</document>
